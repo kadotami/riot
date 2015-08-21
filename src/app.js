@@ -1,10 +1,11 @@
 riot = require('riot/riot');
 router = require('riot-router/lib/router');
 
-
 require('./tagjs/app');
 require('./tagjs/login');
 require('./tagjs/todo');
+
+
 riot.mount("*");
 
 var Route = riot.router.Route,
