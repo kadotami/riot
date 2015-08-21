@@ -2,7 +2,6 @@ riot.tag('todo', '<h3>{ opts.title }</h3> <form onsubmit="{ add }"> <input name=
     this.disabled = true;
 
     this.items = opts.items;
-    console.log(this.items);
 
     if(this.items===undefined) {
       this.items = []

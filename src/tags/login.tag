@@ -14,7 +14,6 @@
     request.post('https://wizpra.card.wizpra.com/api/session')
       .send(params)
       .end(function(err,json) {
-        console.log(json)
         riot.route('#/home');
       });
   }

@@ -9,7 +9,6 @@ riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text
     request.post('https://wizpra.card.wizpra.com/api/session')
       .send(params)
       .end(function(err,json) {
-        console.log(json)
         riot.route('#/home');
       });
   }.bind(this);

@@ -55,10 +55,11 @@
 	riot = __webpack_require__(2);
 	router = __webpack_require__(3);
 
-
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(9);
+
+
 	riot.mount("*");
 
 	var Route = riot.router.Route,
@@ -2072,7 +2073,6 @@
 	    request.post('https://wizpra.card.wizpra.com/api/session')
 	      .send(params)
 	      .end(function(err,json) {
-	        console.log(json)
 	        riot.route('#/home');
 	      });
 	  }.bind(this);
@@ -3432,7 +3432,6 @@
 	    this.disabled = true;
 
 	    this.items = opts.items;
-	    console.log(this.items);
 
 	    if(this.items===undefined) {
 	      this.items = []

@@ -20,7 +20,6 @@
     this.disabled = true;
 
     this.items = opts.items;
-    console.log(this.items);
 
     if(this.items===undefined) {
       this.items = []
