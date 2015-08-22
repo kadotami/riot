@@ -4,6 +4,7 @@
 
   <style scoped>
     :scope {
+      display: block;
       padding-top: 48px;
     }
   </style>

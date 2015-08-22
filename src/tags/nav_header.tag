@@ -7,6 +7,7 @@
   <style scoped>
     :scope {
       position: fixed;
+      display: block;;
       top: 0;
       width: 100%;
       height: 48px;
@@ -35,7 +36,6 @@
   <script>
     this.menus = [
       {url :"/#/home", text: "ホーム"}
-
     ]
   </script>
 </nav-header>
