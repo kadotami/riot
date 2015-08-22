@@ -1,8 +1,9 @@
 var gulp = require('gulp');
 var riot = require('gulp-riot');
+var config = require('../config');
 
 gulp.task('riot', function(){
-  gulp.src("./tags/*.tag")
+  return gulp.src("./src/tags/*.tag")
     .pipe(riot())
-    .pipe(gulp.dest('dest'));
+    .pipe(gulp.dest(config.riot.output));
 });

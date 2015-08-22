@@ -1,6 +1,6 @@
 <todo>
 
-  <h3>{ opts.title }</h3>
+  <h3>do</h3>
 
 
   <form onsubmit={ add }>

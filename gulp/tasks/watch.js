@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
-gulp.task('watch', ['webpack', 'index_copy'], function(){
-  gulp.watch('./src/tags/*.tag', ['webpack', 'index_copy']);
+
+gulp.task('watch', ['webpack'], function(){
+  gulp.watch('./src/tags/*.tag', ['webpack']);
+  gulp.watch('./index.html', ['index_copy']);
 });
