@@ -3,6 +3,7 @@ router = require('riot-router/lib/router');
 
 require('./js/app');
 require('./js/login');
+require('./js/nav_header');
 require('./js/todo');
 
 
@@ -14,8 +15,8 @@ var Route = riot.router.Route,
     RedirectRoute = riot.router.RedirectRoute;
 
 riot.router.routes([
-  new DefaultRoute({tag: 'todo'}),
-  new Route({tag: 'login'})
+  new DefaultRoute({tag: 'login'}),
+  new Route({tag: 'todo'})
   // new Route({tag: 'users'}).routes([
   //    new Route({path:'top', tag: 'users-home', api: {text: 'Select a top user'}}),
   //    new Route({path: '/user/:userId', tag: 'user'}),
