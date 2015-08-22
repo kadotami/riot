@@ -1,5 +1,6 @@
 var dest = './build';
 var src = './src';
+var tmp = './.tmp'
 
 module.exports = {
 
@@ -10,11 +11,11 @@ module.exports = {
   },
 
   riot: {
-    output: src + '/tagjs'
+    output: src + '/js'
   },
 
   webpack: {
-    entry: src + '/main.js',
+    entry: src + '/app.js',
     output: {
       filename: 'bundle.js'
     },

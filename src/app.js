@@ -1,9 +1,9 @@
 riot = require('riot/riot');
 router = require('riot-router/lib/router');
 
-require('./tagjs/app');
-require('./tagjs/login');
-require('./tagjs/todo');
+require('./js/app');
+require('./js/login');
+require('./js/todo');
 
 
 riot.mount("*");

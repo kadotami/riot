@@ -10,5 +10,5 @@ gulp.task('webpack', function () {
     .pipe(gulp.dest(config.riot.output));
   gulp.src(config.webpack.entry)
     .pipe(webpack(config.webpack))
-    .pipe(gulp.dest(config.js.dest));
+    .pipe(gulp.dest('./.tmp'));
 });
