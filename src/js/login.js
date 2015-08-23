@@ -2,14 +2,18 @@ riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text
 
   var request = require('superagent')
   this.login = function() {
-    params = {
+    sendParams = {
       login_id: this.login_id.value,
       password: this.password.value
     };
     request.post('https://wizpra.card.wizpra.com/api/session')
-      .send(params)
+      .send(sendParams)
       .end(function(err,json) {
-        riot.route('#/home');
+        if (err) {
+          console.log(err)
+        } else {
+          riot.route('#/home');
+        }
       });
   }.bind(this);
 

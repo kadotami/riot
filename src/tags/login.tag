@@ -7,14 +7,18 @@
 
   var request = require('superagent')
   login() {
-    params = {
+    sendParams = {
       login_id: this.login_id.value,
       password: this.password.value
     };
     request.post('https://wizpra.card.wizpra.com/api/session')
-      .send(params)
+      .send(sendParams)
       .end(function(err,json) {
-        riot.route('#/home');
+        if (err) {
+          console.log(err)
+        } else {
+          riot.route('#/home');
+        }
       });
   }
 </login>
