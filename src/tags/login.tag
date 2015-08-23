@@ -17,5 +17,4 @@
         riot.route('#/home');
       });
   }
-
 </login>

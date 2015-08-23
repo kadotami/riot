@@ -13,5 +13,4 @@ riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text
       });
   }.bind(this);
 
-
 });

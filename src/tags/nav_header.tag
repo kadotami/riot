@@ -35,7 +35,7 @@
 
   <script>
     this.menus = [
-      {url :"/#/home", text: "ホーム"}
+      {url :"/#/", text: "ホーム"}
     ]
   </script>
 </nav-header>
