@@ -1,7 +1,9 @@
-riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text" placeholder="login_id"> <input name="password" type="password" placeholder="password"> <button>login</button> </form>', function(opts) {
+riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text" placeholder="login_id"> <input name="password" type="password" placeholder="password"> <button>login</button> </form> <div class="{ hide: login_error }"> idとpasswordが一致しません。 </div>', 'login .hide, [riot-tag="login"] .hide{ display:none; }', function(opts) {
 
+  var self = this
+  login_error = true;
   var request = require('superagent')
-  this.login = function() {
+  this.login = function(e) {
     sendParams = {
       login_id: this.login_id.value,
       password: this.password.value
@@ -10,7 +12,8 @@ riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text
       .send(sendParams)
       .end(function(err,json) {
         if (err) {
-          console.log(err)
+          login_error = false;
+          self.update();
         } else {
           riot.route('#/home');
         }

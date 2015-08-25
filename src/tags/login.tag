@@ -5,8 +5,20 @@
     <button>login</button>
   </form>
 
+  <div class={ hide: login_error }>
+    idとpasswordが一致しません。
+  </div>
+
+  <style scoped>
+    .hide {
+      display:none;
+    }
+  </style>
+
+  var self = this
+  login_error = true;
   var request = require('superagent')
-  login() {
+  login(e) {
     sendParams = {
       login_id: this.login_id.value,
       password: this.password.value
@@ -15,7 +27,8 @@
       .send(sendParams)
       .end(function(err,json) {
         if (err) {
-          console.log(err)
+          login_error = false;
+          self.update();
         } else {
           riot.route('#/home');
         }
