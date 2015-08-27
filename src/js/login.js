@@ -15,7 +15,8 @@ riot.tag('login', '<form onsubmit="{ login }"> <input name="login_id" type="text
           login_error = false;
           self.update();
         } else {
-          riot.route('#/home');
+          localStorage.pz_token = JSON.parse(json.text).auth_token
+          riot.route('#/todo');
         }
       });
   }.bind(this);

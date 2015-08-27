@@ -11,7 +11,6 @@ riot.tag('todo', '<h3>do</h3> <form onsubmit="{ add }"> <input name="input" onke
       this.text = e.target.value
     }
     this.add = function(e) {
-      riot.route('customers/267393/edit')
       if (this.text) {
         this.items.push({ title: this.text })
         this.text = this.input.value = ''
